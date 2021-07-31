@@ -1,0 +1,1 @@
+export const SYM_NODE_LIST = Symbol('nodelist')

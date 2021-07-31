@@ -1,0 +1,4 @@
+export default [
+    'click', 'contextmenu', 'dblclick', 'mousedown', 'mouseenter', 'mouseleave', 'mousemove', 'mouseover', 'mouseout', 'mouseup', 'keydown', 'keypress', 'keyup', 'abort', 'beforeunload', 'error', 'hashchange', 'load', 'pageshow', 'pagehide', 'resize', 'scroll', 'unload', 'blur', 'change', 'focus', 'focusin', 'focusout', 'input', 'reset', 'search', 'select', 'submit', 'copy', 'cut', 'paste', 'afterprint', 'beforeprint', 'drag', 'dragend', 'dragenter', 'dragleave', 'dragover', 'dragstart', 'drop', 'abort', 'canplay', 'canplaythrough', 'durationchange', 'emptied', 'ended', 'error', 'loadeddata', 'loadedmetadata', 'loadstart', 'pause', 'play', 'playing', 'progress', 'ratechange', 'seeked', 'seeking', 'stalled', 'suspend', 'timeupdate', 'volumechange', 'waiting', 'animatiend', 'animatiiteration', 'animatistart', 'transitiend', 'message', 'mousewheel', 'online', 'offline', 'popstate', 'show', 'storage', 'toggle', 'wheel'
+]
+
