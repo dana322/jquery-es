@@ -1,0 +1,23 @@
+{
+  "name": "jquery-es",
+  "version": "0.1.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dananboom/jquery-es.git"
+  },
+  "author": "danan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dananboom/jquery-es/issues"
+  },
+  "homepage": "https://github.com/Dananboom/jquery-es#readme",
+  "devDependencies": {
+    "webpack": "^5.47.1",
+    "webpack-cli": "^4.7.2"
+  }
+}
