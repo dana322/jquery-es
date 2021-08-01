@@ -3,3 +3,4 @@ dist
 .*
 webpack.*
 *.config.js
+demo
