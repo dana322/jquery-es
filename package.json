@@ -4,7 +4,8 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "npx eslint ./src",
+    "fix": "npx eslint --fix ./src"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,10 @@
   },
   "homepage": "https://github.com/Dananboom/jquery-es#readme",
   "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "eslist": "^1.0.0-beta.1",
+    "husky": "^7.0.1",
     "webpack": "^5.47.1",
     "webpack-cli": "^4.7.2"
   }
