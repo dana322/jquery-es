@@ -23,6 +23,7 @@ export default class Core {
     }
 }
 
+
 Core.prototype.bind = bind
 Core.prototype.ready = ready
 Core.prototype.html = html
