@@ -9,28 +9,29 @@ import css from './api/css'
 import add from './api/add'
 
 
-export default class Core{
-    constructor(selector){
-        if(selector === document || selector instanceof Node){
+export default class Core {
+    constructor(selector) {
+        if (selector === document || selector instanceof Node) {
             this[SYM_NODE_LIST] = [selector]
-        } else if(selector instanceof NodeList){
+        } else if (selector instanceof NodeList) {
             this[SYM_NODE_LIST] = [...selector]
-        } else if(typeof selector === 'string'){
+        } else if (typeof selector === 'string') {
             this[SYM_NODE_LIST] =  [...document.querySelectorAll(selector)]
         } else {
-            throw new Error ('The parameter of the $ is not recognized')
+            throw new Error('The parameter of the $ is not recognized')
         }
     }
-    bind = bind
-    ready = ready
-    html = html
-    text = text
-    css = css
-    add = add
 }
 
+Core.prototype.bind = bind
+Core.prototype.ready = ready
+Core.prototype.html = html
+Core.prototype.text = text
+Core.prototype.css = css
+Core.prototype.add = add
+
 eventList.forEach(key => {
-    Jquery.prototype[key] = function(callback){
-      this[nodeList].forEach(item => item['on' + key] = callback)
+    Core.prototype[key] = function(eventCallback) {
+        this[SYM_NODE_LIST].forEach(item => item[`on${key}`] = eventCallback)
     }
-  })
+})

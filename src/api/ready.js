@@ -1,3 +1,3 @@
-export default function ready(callback) {
-    this.bind('load', callback)
+export default function ready(eventCallback) {
+    this.bind('load', eventCallback)
 }
