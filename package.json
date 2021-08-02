@@ -6,7 +6,9 @@
   "scripts": {
     "lint": "npx eslint ./src",
     "fix": "npx eslint --fix ./src",
-    "dev": "npx webpack serve --config webpack.dev.js"
+    "dev": "npx webpack serve --config webpack.dev.js",
+    "build": "npx webpack --config webpack.prod.js"
+
   },
   "repository": {
     "type": "git",
