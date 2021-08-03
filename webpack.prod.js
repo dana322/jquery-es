@@ -1,5 +1,6 @@
 const ESLintPlugin = require('eslint-webpack-plugin')
 const SourceMapDevToolPlugin = require('webpack').SourceMapDevToolPlugin
+const ProgressPlugin = require('webpack').ProgressPlugin
 
 module.exports = {
     mode: 'production',
@@ -8,7 +9,8 @@ module.exports = {
         new ESLintPlugin(),
         new SourceMapDevToolPlugin({
             filename: '[name].map',
-        })
+        }),
+        new ProgressPlugin()
     ],
     output: {
         library: {

@@ -2,6 +2,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const EvalSourceMapDevToolPlugin = require('webpack').EvalSourceMapDevToolPlugin
 const ESLintPlugin = require('eslint-webpack-plugin')
+const ProgressPlugin = require('webpack').ProgressPlugin
 
 module.exports = {
     mode: 'development',
@@ -12,7 +13,8 @@ module.exports = {
             template: 'demo/index.html'
         }),
         new EvalSourceMapDevToolPlugin({}),
-        new ESLintPlugin()
+        new ESLintPlugin(),
+        new ProgressPlugin()
     ],
     devServer: {
         open: true,
