@@ -1,6 +1,6 @@
 import $ from '../src'
 
-$( "div" ).bind( "click", function() {
-    alert( "User clicked on 'foo.'" );
-  })
+console.log('js开始了')
+$( "div" ).text( "<b>Some</b> new text." );
+$(function() {})
 
