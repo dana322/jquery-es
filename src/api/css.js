@@ -6,11 +6,7 @@ export default function css(propertyName, value) {
             return window.getComputedStyle(this[SYM_NODE_LIST][0], null).getPropertyValue(propertyName)
         }
         if (propertyName instanceof Array) {
-            let arr = []
-            propertyName.forEach((item, index) => {
-                arr.push(window.getComputedStyle(this[SYM_NODE_LIST][0], null).getPropertyValue(item[index]))
-            })
-            return arr
+            return propertyName.map(item => window.getComputedStyle(this[SYM_NODE_LIST][0], null).getPropertyValue(item))
         }
         if (!(propertyName instanceof Array) && typeof propertyName === 'object') {
             Object.keys(propertyName).forEach(prop => {
