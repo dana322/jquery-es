@@ -8,6 +8,14 @@ module.exports = {
         es6: true,
         node: true
     },
+    globals: {
+        describe: 'readonly',
+        it: 'readonly',
+        before: 'readonly',
+        after: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly'
+    },
     extends: 'eslint:recommended',
     rules: {
         'no-console': 0,
@@ -25,8 +33,13 @@ module.exports = {
         'func-style': [2, 'declaration'],
         'function-paren-newline': 2,
         'id-blacklist': [2, 'err', 'e', 'cb', 'callback'],
-        'id-length': [2, {max: 15,
-            properties: 'never'}],
+        'id-length': [2, 
+            {
+                max: 15,
+                properties: 'never',
+                exceptions: ['$'] 
+            }
+        ],
         'implicit-arrow-linebreak': 2,
         indent: 2,
         'key-spacing': 2,
