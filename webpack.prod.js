@@ -1,6 +1,6 @@
 const ESLintPlugin = require('eslint-webpack-plugin')
-const SourceMapDevToolPlugin = require('webpack').SourceMapDevToolPlugin
-const ProgressPlugin = require('webpack').ProgressPlugin
+const {SourceMapDevToolPlugin} = require('webpack')
+const {ProgressPlugin} = require('webpack')
 
 module.exports = {
     mode: 'production',
@@ -8,7 +8,7 @@ module.exports = {
     plugins: [
         new ESLintPlugin(),
         new SourceMapDevToolPlugin({
-            filename: '[name].map',
+            filename: 'jquery-es.min.js.map'
         }),
         new ProgressPlugin()
     ],
@@ -16,8 +16,8 @@ module.exports = {
         library: {
             name: '$',
             type: 'var',
-            export: 'default',
+            export: 'default'
         },
-        filename: 'jquery-es.min.js',
-    },
+        filename: 'jquery-es.min.js'
+    }
 }

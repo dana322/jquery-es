@@ -1,4 +1,5 @@
 import Core from './core.js'
+import {version} from '../package.json'
 
 export default function entry(arg = document) {
     if (typeof arg === 'function') {
@@ -8,3 +9,4 @@ export default function entry(arg = document) {
     }
 }
 
+entry.version = version

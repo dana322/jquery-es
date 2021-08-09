@@ -1,15 +1,15 @@
 
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const EvalSourceMapDevToolPlugin = require('webpack').EvalSourceMapDevToolPlugin
+const HtmlPlugin = require('html-webpack-plugin')
+const {EvalSourceMapDevToolPlugin} = require('webpack')
 const ESLintPlugin = require('eslint-webpack-plugin')
-const ProgressPlugin = require('webpack').ProgressPlugin
+const {ProgressPlugin} = require('webpack')
 
 module.exports = {
     mode: 'development',
     entry: './demo/index.js',
     stats: 'errors-only',
     plugins: [
-        new HtmlWebpackPlugin({
+        new HtmlPlugin({
             template: 'demo/index.html'
         }),
         new EvalSourceMapDevToolPlugin({}),
@@ -19,14 +19,14 @@ module.exports = {
     devServer: {
         open: true,
         port: 8000,
-        overlay: true,
+        overlay: true
     },
     module: {
         rules: [
-          {
-            test: /\.html$/i,
-            loader: 'html-loader',
-          }
+            {
+                test: /\.html$/i,
+                loader: 'html-loader'
+            }
         ]
     }
 }
