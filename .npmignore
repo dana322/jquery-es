@@ -1,0 +1,9 @@
+dist
+node_modules
+test
+.*
+webpack.*
+commitlint.config.js
+karma.conf.js
+demo
+coverage
