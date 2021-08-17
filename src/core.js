@@ -7,6 +7,7 @@ import html from './api/html'
 import text from './api/text'
 import css from './api/css'
 import add from './api/add'
+import find from './api/find'
 
 
 export default class Core {
@@ -30,6 +31,8 @@ Core.prototype.html = html
 Core.prototype.text = text
 Core.prototype.css = css
 Core.prototype.add = add
+Core.prototype.find = find
+
 
 eventList.forEach(key => {
     Core.prototype[key] = function(eventCallback) {
