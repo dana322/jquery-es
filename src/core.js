@@ -9,6 +9,7 @@ import css from './api/css'
 import add from './api/add'
 import find from './api/find'
 import next from './api/next'
+import nextAll from './api/next-all'
 
 
 export default class Core {
@@ -34,6 +35,7 @@ Core.prototype.css = css
 Core.prototype.add = add
 Core.prototype.find = find
 Core.prototype.next = next
+Core.prototype.nextAll = nextAll
 
 
 eventList.forEach(key => {
