@@ -8,6 +8,7 @@ import text from './api/text'
 import css from './api/css'
 import add from './api/add'
 import find from './api/find'
+import next from './api/next'
 
 
 export default class Core {
@@ -32,6 +33,7 @@ Core.prototype.text = text
 Core.prototype.css = css
 Core.prototype.add = add
 Core.prototype.find = find
+Core.prototype.next = next
 
 
 eventList.forEach(key => {
