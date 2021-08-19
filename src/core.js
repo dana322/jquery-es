@@ -10,6 +10,7 @@ import add from './api/add'
 import find from './api/find'
 import next from './api/next'
 import nextAll from './api/next-all'
+import addClass from './api/add-class'
 
 
 export default class Core {
@@ -36,6 +37,7 @@ Core.prototype.add = add
 Core.prototype.find = find
 Core.prototype.next = next
 Core.prototype.nextAll = nextAll
+Core.prototype.addClass = addClass
 
 
 eventList.forEach(key => {
