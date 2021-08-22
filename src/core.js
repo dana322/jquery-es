@@ -11,7 +11,9 @@ import find from './api/find'
 import next from './api/next'
 import nextAll from './api/next-all'
 import addClass from './api/add-class'
-
+import prev from './api/prev'
+import prevAll from './api/prev-all'
+import siblings from './api/siblings'
 
 export default class Core {
     constructor(selector) {
@@ -38,7 +40,9 @@ Core.prototype.find = find
 Core.prototype.next = next
 Core.prototype.nextAll = nextAll
 Core.prototype.addClass = addClass
-
+Core.prototype.prev = prev
+Core.prototype.prevAll = prevAll
+Core.prototype.siblings = siblings
 
 eventList.forEach(key => {
     Core.prototype[key] = function(eventCallback) {
