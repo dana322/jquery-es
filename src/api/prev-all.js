@@ -1,9 +1,9 @@
 import {SYM_NODE_LIST} from '../utils/symbol' 
-import $ from '../index'
+import Core from '../core'
 
 export default function (selector) {
-    const newObj = $()
-    const elHashTable = selector ? new Set(newObj.find(selector)[SYM_NODE_LIST]) : undefined
+    const newObj = new Core()
+    const elHashTable = selector ? new Set(new Core(selector)[SYM_NODE_LIST]) : undefined
     newObj[SYM_NODE_LIST] = this[SYM_NODE_LIST]
         .reduce((nodelist, nodeItem) => {
             let nextEl = nodeItem.previousSibling
@@ -15,5 +15,6 @@ export default function (selector) {
             }   
             return nodelist
         }, [])
+    newObj.prevObject = this
     return newObj
 }

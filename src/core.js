@@ -23,6 +23,9 @@ export default class Core {
             this[SYM_NODE_LIST] = [...selector]
         } else if (typeof selector === 'string') {
             this[SYM_NODE_LIST] =  [...document.querySelectorAll(selector)]
+            this.prevObject = new Core(document)
+        } else if (selector === undefined) {
+            this[SYM_NODE_LIST] = []
         } else {
             throw new Error('The parameter of the $ is not recognized')
         }
